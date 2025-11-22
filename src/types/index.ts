@@ -10,21 +10,21 @@ export interface StudentProfile {
   institution: string; // Liceo o Universidad/Instituto
   gradeOrYear: string; // "4º Medio" o "3er Semestre"
   career?: string; // Solo para educación superior
-  age: number; 
+  age: number;
   condition: string; // Resumen o título principal
-  
+
   // Detailed Physical Profile
   specificConditions: string[]; // Lista de checkbox seleccionados
   otherConditionDetail?: string; // Texto libre si selecciona "Otro"
   needs: AccessibilityFeatureType[];
   otherNeeds?: string; // Detalles de accesibilidad del entorno
-  
+
   region?: string;
   commune?: string;
   interests: string[]; // Professional interests (e.g. Python)
   skills: string[];
 
-  
+
   // Psychosocial Profile
   bio: string;
   personalityTraits: string[]; // e.g. "Resiliente", "Líder", "Creativo"
@@ -56,8 +56,8 @@ export interface AccessibilityFeature {
 export interface Experience {
   id: string;
   title: string;
-  type: 'Job Shadowing' | 'Pasantía' | 'Visita Técnica' | 'Práctica Profesional';
-  targetAudience: EducationLevel[]; 
+  type: 'Job Shadowing' | 'Pasantía' | 'Visita Técnica' | 'Práctica Profesional' | 'Mentoría' | 'Capacitación';
+  targetAudience: EducationLevel[];
   company: string;
   companyId?: string;
   duration: string;
@@ -65,7 +65,7 @@ export interface Experience {
   matchPercentage: number;
   tags: string[];
   physicalFeatures: AccessibilityFeature[];
-  otherAccessibilityDetails?: string; 
+  otherAccessibilityDetails?: string;
   aiExplanation: string;
   description: string;
   mentor?: Mentor;
