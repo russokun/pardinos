@@ -20,7 +20,8 @@ export const INITIAL_STUDENT: StudentProfile = {
     // Psychosocial
     bio: "Desarrollador full-stack con experiencia en Python y Java. He liderado 3 proyectos universitarios y mi equipo ganó el último hackathon regional. Especializado en resolver problemas complejos y optimizar código. Busco contribuir en proyectos escalables.",
     personalityTraits: ["Resiliente", "Analítico", "Problem Solver"],
-    hobbies: ["Videojuegos", "Programacion", "Anime"]
+    hobbies: ["Videojuegos", "Programacion", "Anime"],
+    companyMatchAnalysis: "Ganador de hackathon regional con experiencia técnica comprobada en Python y Java. Su capacidad para liderar equipos y resolver problemas complejos lo hace ideal para proyectos de desarrollo que requieran innovación y trabajo colaborativo."
 };
 
 export const MOCK_STUDENTS_DB: StudentProfile[] = [
@@ -41,7 +42,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         needs: ['elevator', 'quiet_space'],
         bio: "Diseñadora gráfica freelance con +10k seguidores en Instagram. Especializada en identidad visual para marcas juveniles. Portfolio con 5 clientes activos. Domino Canva, Illustrator y tendencias de RRSS.",
         personalityTraits: ["Creativa", "Estratégica", "Detallista"],
-        hobbies: ["Dibujo Digital", "Fotografía", "K-Pop"]
+        hobbies: ["Dibujo Digital", "Fotografía", "K-Pop"],
+        companyMatchAnalysis: "Portfolio comprobado con 5 clientes activos y presencia digital de +10k seguidores. Su expertise en diseño para audiencias juveniles y dominio de tendencias RRSS la hace perfecta para equipos de marketing y branding orientados a Gen Z."
     },
     {
         id: "u3",
@@ -60,7 +62,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         needs: ['ramp', 'wide_door', 'bathroom'],
         bio: "Ex-capitán de básquet adaptado con experiencia liderando equipos de 15+ personas. Certificado en Excel y gestión de proyectos. Coordiné eventos universitarios para +200 asistentes. Busco aplicar mis skills de liderazgo en el mundo corporativo.",
         personalityTraits: ["Líder", "Estratega", "Comunicador"],
-        hobbies: ["Básquet Adaptado", "Cocina", "Podcasts"]
+        hobbies: ["Básquet Adaptado", "Cocina", "Podcasts"],
+        companyMatchAnalysis: "Líder natural con experiencia gestionando equipos de 15+ personas y eventos masivos. Sus habilidades en Excel y gestión de proyectos, combinadas con su capacidad comunicativa, lo posicionan como candidato ideal para roles de coordinación y liderazgo de equipos."
     },
     {
         id: "u4",
@@ -79,7 +82,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         needs: ['quiet_space', 'elevator'],
         bio: "Diseñadora UX especializada en accesibilidad digital. Audité 3 apps y mejoré su usabilidad en 40%. Certificada en WCAG 2.1. Mi perspectiva única me permite detectar barreras que otros diseñadores no ven. Portfolio en Behance.",
         personalityTraits: ["Experta en UX", "Innovadora", "User-Centric"],
-        hobbies: ["Audiolibros", "Música", "Yoga"]
+        hobbies: ["Audiolibros", "Música", "Yoga"],
+        companyMatchAnalysis: "Experta certificada en WCAG 2.1 con resultados medibles: mejoró la usabilidad de 3 apps en 40%. Su perspectiva única en accesibilidad digital es invaluable para empresas que buscan crear productos verdaderamente inclusivos y cumplir con estándares internacionales."
     },
     {
         id: "u5",
@@ -97,7 +101,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         needs: ['ramp', 'bathroom'],
         bio: "Community Manager con 2.5k seguidores orgánicos y engagement del 8%. Gestiono RRSS de mi curso (500+ alumnos). Experto en copywriting viral y análisis de métricas. Crecí una cuenta de 0 a 2k en 6 meses.",
         personalityTraits: ["Comunicador", "Data-Driven", "Creativo"],
-        hobbies: ["Streaming", "Memes", "Series"]
+        hobbies: ["Streaming", "Memes", "Series"],
+        companyMatchAnalysis: "Community Manager con métricas probadas: 8% de engagement y crecimiento de 0 a 2k seguidores en 6 meses. Su experiencia gestionando RRSS para audiencias de 500+ personas y habilidad para crear contenido viral lo hacen perfecto para marcas que buscan crecimiento orgánico."
     },
     {
         id: "u6",
@@ -116,7 +121,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         needs: ['ramp', 'wide_door', 'bathroom'],
         bio: "Futura ingeniera con certificación en Python y Data Analytics. Desarrollé un modelo predictivo que optimizó procesos académicos en 25%. Top 10% de mi promoción. Experta en Excel, Power BI y visualización de datos.",
         personalityTraits: ["Analítica", "Innovadora", "Solucionadora"],
-        hobbies: ["Ajedrez", "Documentales", "Ciclismo adaptado"]
+        hobbies: ["Ajedrez", "Documentales", "Ciclismo adaptado"],
+        companyMatchAnalysis: "Top 10% de su promoción con resultados tangibles: desarrolló modelo predictivo que optimizó procesos en 25%. Certificada en Python y Data Analytics, domina Power BI y visualización de datos. Ideal para equipos de Business Intelligence y optimización de procesos."
     },
     {
         id: "u7",
@@ -134,7 +140,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         needs: ['quiet_space'],
         bio: "Ganador del concurso regional de robótica 2024. Programo en Arduino y diseño PCBs. Mi canal de YouTube tiene 1.5k subs enseñando electrónica. Prototipo soluciones IoT y tengo experiencia con impresión 3D.",
         personalityTraits: ["Ingenioso", "Tech-Savvy", "Maker"],
-        hobbies: ["Lego Technic", "YouTube", "Impresión 3D"]
+        hobbies: ["Lego Technic", "YouTube", "Impresión 3D"],
+        companyMatchAnalysis: "Ganador de concurso regional de robótica con 1.5k suscriptores en YouTube enseñando electrónica. Experiencia en Arduino, diseño de PCBs e IoT. Su mentalidad maker y capacidad de crear prototipos rápidos lo hace valioso para equipos de innovación y R&D."
     },
     {
         id: "u8",
@@ -153,7 +160,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         needs: ['elevator', 'bathroom', 'ramp'],
         bio: "Técnico en Enfermería con prácticas en UCI y emergencias. Certificada en primeros auxilios avanzados y atención geriátrica. 98% de aprobación en evaluaciones clínicas. Enfoque en atención humanizada basada en evidencia.",
         personalityTraits: ["Profesional", "Responsable", "Experta Clínica"],
-        hobbies: ["Lectura", "Repostería", "Voluntariado"]
+        hobbies: ["Lectura", "Repostería", "Voluntariado"],
+        companyMatchAnalysis: "Técnico en Enfermería con 98% de aprobación en evaluaciones clínicas y experiencia en UCI/emergencias. Certificada en primeros auxilios avanzados. Su enfoque en atención humanizada basada en evidencia la hace esencial para instituciones de salud que priorizan la calidad del cuidado."
     }
 ];
 

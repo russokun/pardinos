@@ -30,21 +30,23 @@ export default function App() {
     useEffect(() => {
         if (view === 'company-talent-scout') {
             const loadCandidates = () => {
-                // 1. Set initial candidates with "Analizando..." state immediately
+                // 1. Set candidates with pre-generated analysis or "Analizando..." state
                 const initialData = MOCK_STUDENTS_DB.map(cand => ({
                     profile: cand,
-                    matchAnalysis: "La IA está analizando la compatibilidad cultural..."
+                    matchAnalysis: cand.companyMatchAnalysis || "La IA está analizando la compatibilidad..."
                 }));
                 setCandidates(initialData);
 
-                // 2. Update progressively in background
+                // 2. Only generate AI analysis for candidates without pre-generated text
                 MOCK_STUDENTS_DB.forEach(async (cand) => {
-                    const analysis = await generateStudentAnalysisForCompany(company, cand);
-                    setCandidates(prev => prev.map(p =>
-                        p.profile.id === cand.id
-                            ? { ...p, matchAnalysis: analysis }
-                            : p
-                    ));
+                    if (!cand.companyMatchAnalysis) {
+                        const analysis = await generateStudentAnalysisForCompany(company, cand);
+                        setCandidates(prev => prev.map(p =>
+                            p.profile.id === cand.id
+                                ? { ...p, matchAnalysis: analysis }
+                                : p
+                        ));
+                    }
                 });
             };
             loadCandidates();

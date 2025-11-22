@@ -66,7 +66,7 @@ export const CompanyTalentScout: React.FC<CompanyTalentScoutProps> = ({
                                 <div className="space-y-4 mb-6 flex-1">
                                     {/* Bio */}
                                     <div className="bg-white/5 p-3 rounded-xl">
-                                        <p className="text-slate-300 text-sm italic line-clamp-3">"{profile.bio}"</p>
+                                        <p className="text-slate-300 text-sm italic">"{profile.bio}"</p>
                                     </div>
 
                                     {/* Tags */}

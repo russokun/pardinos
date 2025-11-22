@@ -29,6 +29,9 @@ export interface StudentProfile {
   bio: string;
   personalityTraits: string[]; // e.g. "Resiliente", "Líder", "Creativo"
   hobbies: string[]; // e.g. "Gaming", "Anime", "Fútbol"
+
+  // Company Match Analysis (optional, for pre-generated insights)
+  companyMatchAnalysis?: string;
 }
 
 export interface CompanyProfile {
