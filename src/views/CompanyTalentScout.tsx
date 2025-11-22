@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, Sparkles, Heart } from 'lucide-react';
+import { User, Sparkles, Heart, Plus } from 'lucide-react';
 import { StudentProfile, CompanyProfile, ViewState } from '../types/index';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
@@ -30,7 +30,16 @@ export const CompanyTalentScout: React.FC<CompanyTalentScoutProps> = ({
                             <p className="text-slate-400 text-xs uppercase font-bold tracking-wider">Modo Padrino Activado</p>
                         </div>
                     </div>
-                    <Button variant="ghost" onClick={() => setView('landing')}>Cerrar Sesión</Button>
+                    <div className="flex gap-3">
+                        <Button
+                            variant="primary"
+                            onClick={() => setView('company-create-post')}
+                            icon={<Plus className="w-4 h-4" />}
+                        >
+                            Crear Oportunidad
+                        </Button>
+                        <Button variant="ghost" onClick={() => setView('landing')}>Cerrar Sesión</Button>
+                    </div>
                 </div>
             </div>
 

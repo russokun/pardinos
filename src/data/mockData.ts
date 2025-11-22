@@ -173,6 +173,52 @@ export const INITIAL_COMPANY: CompanyProfile = {
     cultureTags: ["Gaming", "Innovación", "Trabajo en Equipo"]
 };
 
+export const MOCK_COMPANIES_DB: CompanyProfile[] = [
+    INITIAL_COMPANY,
+    {
+        name: "DevForce Chile",
+        industry: "Desarrollo de Software",
+        description: "Consultora de desarrollo enfocada en soluciones empresariales.",
+        logoChar: "D",
+        cultureTags: ["Innovación", "Tecnología", "Colaboración"]
+    },
+    {
+        name: "Social Media Lab",
+        industry: "Marketing Digital",
+        description: "Agencia boutique especializada en estrategias de RRSS para marcas emergentes.",
+        logoChar: "S",
+        cultureTags: ["Creatividad", "Dinámico", "Data-Driven"]
+    },
+    {
+        name: "Accesibilidad+",
+        industry: "Consultoría UX",
+        description: "Expertos en diseño inclusivo y accesibilidad digital.",
+        logoChar: "A",
+        cultureTags: ["Inclusión", "UX/UI", "Impacto Social"]
+    },
+    {
+        name: "Líder+",
+        industry: "Consultoría de Gestión",
+        description: "Formación en liderazgo y desarrollo de habilidades directivas.",
+        logoChar: "L",
+        cultureTags: ["Liderazgo", "Desarrollo", "Mentoría"]
+    },
+    {
+        name: "DataVision",
+        industry: "Analítica de Datos",
+        description: "Transformamos datos en insights accionables para empresas.",
+        logoChar: "D",
+        cultureTags: ["Data Science", "Analytics", "Business Intelligence"]
+    },
+    {
+        name: "MakerLab",
+        industry: "Innovación y Prototipado",
+        description: "Laboratorio maker enfocado en IoT, robótica y fabricación digital.",
+        logoChar: "M",
+        cultureTags: ["Maker", "IoT", "Innovación"]
+    }
+];
+
 export const INITIAL_EXPERIENCES: Experience[] = [
     {
         id: "exp-1",

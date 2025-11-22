@@ -9,6 +9,7 @@ import { Landing } from './views/Landing';
 import { StudentDashboard } from './views/StudentDashboard';
 import { StudentProfileView } from './views/StudentProfile';
 import { CompanyTalentScout } from './views/CompanyTalentScout';
+import { CompanyCreatePost } from './views/CompanyCreatePost';
 
 export default function App() {
     const [view, setView] = useState<ViewState>('landing');
@@ -75,6 +76,20 @@ export default function App() {
         speakText("¡Felicidades! Tu interés ha sido enviado.");
     };
 
+    const handleCreatePost = (newExperience: Omit<Experience, 'id'>) => {
+        const experienceWithId: Experience = {
+            ...newExperience,
+            id: `exp-${Date.now()}`
+        };
+        setExperiences(prev => [...prev, experienceWithId]);
+        setSuccessMessage("¡Oportunidad publicada exitosamente!");
+        setShowSuccess(true);
+        setTimeout(() => {
+            setShowSuccess(false);
+            setView('company-talent-scout');
+        }, 2000);
+    };
+
     // --- RENDER ---
 
     if (showSuccess) {
@@ -122,6 +137,16 @@ export default function App() {
                 candidates={candidates}
                 setView={setView}
                 onSponsor={handleSponsor}
+            />
+        );
+    }
+
+    if (view === 'company-create-post') {
+        return (
+            <CompanyCreatePost
+                company={company}
+                setView={setView}
+                onCreatePost={handleCreatePost}
             />
         );
     }
