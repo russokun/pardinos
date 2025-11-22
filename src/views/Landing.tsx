@@ -4,6 +4,7 @@ import { Badge } from '../components/ui/Badge';
 import { Card } from '../components/ui/Card';
 import { BackgroundAnimation } from '../components/BackgroundAnimation';
 import { ViewState } from '../types/index';
+import { Footer } from '../components/Footer';
 
 interface LandingProps {
     setView: (view: ViewState) => void;
@@ -22,14 +23,15 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
             {/* Floating Particles Animation */}
             <BackgroundAnimation />
 
-            <header className="relative z-10 p-6 flex justify-between items-center max-w-6xl mx-auto w-full">
-                <div className="flex items-center gap-3">
-                    <img src="/images/logo.png" alt="Padrinos Teletón Logo" className="h-12 w-auto object-contain" />
-                    <span className="text-2xl font-black tracking-tighter">Padrinos Teletón</span>
+            <header className="relative z-10 p-6 flex justify-center items-center max-w-6xl mx-auto w-full">
+                <div className="flex items-center justify-center gap-8 md:gap-16">
+                    <img src="/images/teletonlogonb.png" alt="Logo Teletón" className="h-24 md:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                    <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-24 md:h-36 w-auto object-contain animate-fade-in" />
+                    <img src="/images/bhlogonb.png" alt="Logo Bendita Hackathon" className="h-16 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
                 </div>
             </header>
 
-            <main className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto mt-10">
+            <main className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto mt-5">
                 <Badge variant="red" className="mb-6 animate-pulse-slow">Teletón x Bendita Hackathon</Badge>
                 <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight">
                     Conectando <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-purple">Corazones y Talento</span>
@@ -38,7 +40,7 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
                     Una plataforma donde las empresas apadrinan el futuro y los jóvenes descubren su potencial sin barreras.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 w-full max-w-2xl">
+                <div className="grid md:grid-cols-2 gap-6 w-full max-w-2xl mb-5">
                     <Card className="text-left hover:border-brand-red hover:scale-[1.02] active:scale-95 transition-all duration-200 group cursor-pointer bg-gradient-to-b from-base-900 to-base-950 relative z-20" onClick={() => setView('student-dashboard')}>
                         <div className="w-14 h-14 bg-brand-red/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-red group-hover:text-white transition-colors text-brand-red">
                             <User className="w-8 h-8" />
@@ -56,6 +58,8 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
                     </Card>
                 </div>
             </main>
+
+            <Footer />
         </div>
     );
 };
