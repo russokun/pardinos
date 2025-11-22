@@ -24,7 +24,7 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
 
             <header className="relative z-10 p-6 flex justify-between items-center max-w-6xl mx-auto w-full">
                 <div className="flex items-center gap-3">
-                    <img src="/src/assets/images/logo.png" alt="Padrinos Teletón Logo" className="h-12 w-auto object-contain" />
+                    <img src="/images/logo.png" alt="Padrinos Teletón Logo" className="h-12 w-auto object-contain" />
                     <span className="text-2xl font-black tracking-tighter">Padrinos Teletón</span>
                 </div>
             </header>
