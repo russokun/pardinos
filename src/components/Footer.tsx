@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
                             <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-16 w-auto object-contain" />
                         </div>
                         <p className="text-slate-400 leading-relaxed mb-6 max-w-md">
-                            Construyendo puentes entre el talento joven con discapacidad y las empresas líderes del futuro. Una iniciativa nacida en la Bendita Hackathon.
+                            Plataforma profesional que conecta talento diverso con empresas líderes. Facilitamos oportunidades de desarrollo, mentoría y crecimiento profesional.
                         </p>
                         <div className="flex gap-4">
                             {[Github, Linkedin, Twitter].map((Icon, i) => (

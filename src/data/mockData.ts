@@ -18,8 +18,8 @@ export const INITIAL_STUDENT: StudentProfile = {
     needs: ['ramp', 'bathroom', 'wide_door'],
     otherNeeds: "",
     // Psychosocial
-    bio: "Soy un apasionado por los videojuegos y la tecnología. Me encanta resolver puzles y trabajar en equipo. Busco una oportunidad para demostrar que mi silla no define mi código.",
-    personalityTraits: ["Resiliente", "Curioso", "Gamer"],
+    bio: "Desarrollador full-stack con experiencia en Python y Java. He liderado 3 proyectos universitarios y mi equipo ganó el último hackathon regional. Especializado en resolver problemas complejos y optimizar código. Busco contribuir en proyectos escalables.",
+    personalityTraits: ["Resiliente", "Analítico", "Problem Solver"],
     hobbies: ["Videojuegos", "Programacion", "Anime"]
 };
 
@@ -39,8 +39,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         interests: ["Diseño Gráfico", "Redes Sociales"],
         skills: ["Canva", "TikTok", "Ilustración"],
         needs: ['elevator', 'quiet_space'],
-        bio: "Me expreso a través del dibujo. A veces soy un poco tímida, pero cuando tengo confianza soy muy creativa. Quiero ver cómo funciona una agencia por dentro.",
-        personalityTraits: ["Creativa", "Observadora", "Detallista"],
+        bio: "Diseñadora gráfica freelance con +10k seguidores en Instagram. Especializada en identidad visual para marcas juveniles. Portfolio con 5 clientes activos. Domino Canva, Illustrator y tendencias de RRSS.",
+        personalityTraits: ["Creativa", "Estratégica", "Detallista"],
         hobbies: ["Dibujo Digital", "Fotografía", "K-Pop"]
     },
     {
@@ -58,8 +58,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         interests: ["Gestión", "Liderazgo"],
         skills: ["Excel", "Oratoria"],
         needs: ['ramp', 'wide_door', 'bathroom'],
-        bio: "Fui capitán del equipo de básquet adaptado. Me gusta competir y organizar equipos. Busco un mentor que me enseñe a liderar proyectos reales.",
-        personalityTraits: ["Líder", "Competitivo", "Extrovertido"],
+        bio: "Ex-capitán de básquet adaptado con experiencia liderando equipos de 15+ personas. Certificado en Excel y gestión de proyectos. Coordiné eventos universitarios para +200 asistentes. Busco aplicar mis skills de liderazgo en el mundo corporativo.",
+        personalityTraits: ["Líder", "Estratega", "Comunicador"],
         hobbies: ["Básquet Adaptado", "Cocina", "Podcasts"]
     },
     {
@@ -77,8 +77,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         interests: ["UX/UI", "Accesibilidad Web", "Psicología"],
         skills: ["Figma", "HTML/CSS", "Empatía"],
         needs: ['quiet_space', 'elevator'],
-        bio: "Veo el mundo diferente y eso me ayuda a diseñar mejor. Quiero crear productos digitales que todos puedan usar, sin excepciones.",
-        personalityTraits: ["Empática", "Perfeccionista", "Inclusiva"],
+        bio: "Diseñadora UX especializada en accesibilidad digital. Audité 3 apps y mejoré su usabilidad en 40%. Certificada en WCAG 2.1. Mi perspectiva única me permite detectar barreras que otros diseñadores no ven. Portfolio en Behance.",
+        personalityTraits: ["Experta en UX", "Innovadora", "User-Centric"],
         hobbies: ["Audiolibros", "Música", "Yoga"]
     },
     {
@@ -95,8 +95,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         interests: ["Marketing Digital", "Community Management"],
         skills: ["Instagram", "Copywriting", "Análisis de métricas"],
         needs: ['ramp', 'bathroom'],
-        bio: "Manejo las RRSS de mi curso y tengo +2k seguidores en mi cuenta personal. Me encanta crear contenido que conecte con la gente.",
-        personalityTraits: ["Sociable", "Estratégico", "Carismático"],
+        bio: "Community Manager con 2.5k seguidores orgánicos y engagement del 8%. Gestiono RRSS de mi curso (500+ alumnos). Experto en copywriting viral y análisis de métricas. Crecí una cuenta de 0 a 2k en 6 meses.",
+        personalityTraits: ["Comunicador", "Data-Driven", "Creativo"],
         hobbies: ["Streaming", "Memes", "Series"]
     },
     {
@@ -114,8 +114,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         interests: ["Optimización de procesos", "Data Science", "Sustentabilidad"],
         skills: ["Python", "Excel Avanzado", "Pensamiento Analítico"],
         needs: ['ramp', 'wide_door', 'bathroom'],
-        bio: "Los números cuentan historias. Quiero usar datos para mejorar procesos y crear impacto social positivo.",
-        personalityTraits: ["Analítica", "Metódica", "Visionaria"],
+        bio: "Futura ingeniera con certificación en Python y Data Analytics. Desarrollé un modelo predictivo que optimizó procesos académicos en 25%. Top 10% de mi promoción. Experta en Excel, Power BI y visualización de datos.",
+        personalityTraits: ["Analítica", "Innovadora", "Solucionadora"],
         hobbies: ["Ajedrez", "Documentales", "Ciclismo adaptado"]
     },
     {
@@ -132,8 +132,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         interests: ["Robótica", "Electrónica", "Gaming"],
         skills: ["Arduino", "Soldadura", "Minecraft"],
         needs: ['quiet_space'],
-        bio: "Construyo robots en mi tiempo libre. La tecnología no necesita palabras, solo creatividad. Sueño con crear inventos que ayuden a otros.",
-        personalityTraits: ["Ingenioso", "Perseverante", "Maker"],
+        bio: "Ganador del concurso regional de robótica 2024. Programo en Arduino y diseño PCBs. Mi canal de YouTube tiene 1.5k subs enseñando electrónica. Prototipo soluciones IoT y tengo experiencia con impresión 3D.",
+        personalityTraits: ["Ingenioso", "Tech-Savvy", "Maker"],
         hobbies: ["Lego Technic", "YouTube", "Impresión 3D"]
     },
     {
@@ -151,8 +151,8 @@ export const MOCK_STUDENTS_DB: StudentProfile[] = [
         interests: ["Salud", "Atención humanizada", "Nutrición"],
         skills: ["Primeros Auxilios", "Comunicación efectiva", "Paciencia"],
         needs: ['elevator', 'bathroom', 'ramp'],
-        bio: "Quiero devolver la mano. Teletón me ayudó cuando era niña, ahora quiero ayudar yo. Creo en el poder del cuidado con cariño.",
-        personalityTraits: ["Compasiva", "Responsable", "Optimista"],
+        bio: "Técnico en Enfermería con prácticas en UCI y emergencias. Certificada en primeros auxilios avanzados y atención geriátrica. 98% de aprobación en evaluaciones clínicas. Enfoque en atención humanizada basada en evidencia.",
+        personalityTraits: ["Profesional", "Responsable", "Experta Clínica"],
         hobbies: ["Lectura", "Repostería", "Voluntariado"]
     }
 ];

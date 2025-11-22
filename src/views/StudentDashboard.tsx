@@ -48,7 +48,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                                 {/* Progress Bar for Profile Completion */}
                                 <div className="flex items-center gap-2 text-sm text-brand-purple font-bold bg-brand-purple/10 px-3 py-1 rounded-full w-fit">
                                     <PenTool className="w-4 h-4" />
-                                    ¡Completa tu perfil psicosocial para que te encuentren los padrinos!
+                                    Completa tu perfil profesional para destacar ante empresas
                                 </div>
                             </div>
                         </div>
@@ -62,9 +62,9 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             <div className="max-w-4xl mx-auto px-6 py-8 space-y-8">
                 <section>
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <Sparkles className="text-brand-red" /> Oportunidades para Inspirarte
+                        <Sparkles className="text-brand-red" /> Oportunidades de Desarrollo
                     </h2>
-                    <p className="text-slate-400 mb-6">Estas empresas están buscando talentos como tú. Si te gusta alguna, diles "Me interesa" y revisarán tu perfil.</p>
+                    <p className="text-slate-400 mb-6">Conecta con empresas líderes que buscan talento como el tuyo. Aplica a las oportunidades que mejor se alineen con tus objetivos profesionales.</p>
 
                     <div className="grid gap-6">
                         {experiences.map((exp) => (

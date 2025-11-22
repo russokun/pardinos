@@ -34,10 +34,10 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
             <main className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto mt-5">
                 <Badge variant="red" className="mb-6 animate-pulse-slow">Teletón x Bendita Hackathon</Badge>
                 <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight">
-                    Conectando <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-purple">Corazones y Talento</span>
+                    Conectando <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-purple">Talento y Oportunidades</span>
                 </h1>
                 <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
-                    Una plataforma donde las empresas apadrinan el futuro y los jóvenes descubren su potencial sin barreras.
+                    Plataforma profesional donde empresas encuentran talento diverso y jóvenes acceden a oportunidades reales de desarrollo.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6 w-full max-w-2xl mb-5">
@@ -45,16 +45,16 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
                         <div className="w-14 h-14 bg-brand-red/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-red group-hover:text-white transition-colors text-brand-red">
                             <User className="w-8 h-8" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-2 group-hover:text-brand-red transition-colors">Soy Talento Joven</h3>
-                        <p className="text-slate-400 text-sm">Quiero mostrar quién soy y encontrar un mentor.</p>
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-brand-red transition-colors">Soy Profesional</h3>
+                        <p className="text-slate-400 text-sm">Explora oportunidades de mentoría y desarrollo profesional.</p>
                     </Card>
 
                     <Card className="text-left hover:border-brand-purple hover:scale-[1.02] active:scale-95 transition-all duration-200 group cursor-pointer bg-gradient-to-b from-base-900 to-base-950 relative z-20" onClick={() => setView('company-talent-scout')}>
                         <div className="w-14 h-14 bg-brand-purple/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-purple group-hover:text-white transition-colors text-brand-purple">
                             <HeartHandshake className="w-8 h-8" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-2 group-hover:text-brand-purple transition-colors">Soy Padrino/Empresa</h3>
-                        <p className="text-slate-400 text-sm">Busco talento inclusivo para apadrinar y mentorear.</p>
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-brand-purple transition-colors">Soy Empresa</h3>
+                        <p className="text-slate-400 text-sm">Descubre talento diverso para tu equipo y mentoriza profesionales.</p>
                     </Card>
                 </div>
             </main>
