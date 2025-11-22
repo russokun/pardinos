@@ -1,0 +1,7 @@
+{
+  "name": "Padrinos Teletón",
+  "description": "Plataforma de apadrinamiento laboral inclusivo para estudiantes.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
