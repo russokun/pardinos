@@ -3,16 +3,13 @@ import { Heart, Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-re
 
 export const Footer: React.FC = () => {
     return (
-        <footer className="bg-base-900 border-t border-white/10 pt-16 pb-8 relative z-20">
+        <footer className="bg-base-900 border-t border-white/10 pt-10 pb-8 relative z-20">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="grid md:grid-cols-4 gap-12 mb-12">
                     {/* Brand Column */}
                     <div className="col-span-1 md:col-span-2">
-                        <div className="flex items-center gap-3 mb-6">
-                            <div className="w-10 h-10 bg-gradient-to-br from-brand-red to-brand-purple rounded-lg flex items-center justify-center shadow-lg shadow-brand-red/20">
-                                <Heart className="text-white w-6 h-6 fill-white" />
-                            </div>
-                            <span className="text-2xl font-black tracking-tighter text-white">Padrinos Teletón</span>
+                        <div className="flex items-center mb-6">
+                            <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-16 w-auto object-contain" />
                         </div>
                         <p className="text-slate-400 leading-relaxed mb-6 max-w-md">
                             Construyendo puentes entre el talento joven con discapacidad y las empresas líderes del futuro. Una iniciativa nacida en la Bendita Hackathon.

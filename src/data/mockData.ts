@@ -20,7 +20,7 @@ export const INITIAL_STUDENT: StudentProfile = {
     // Psychosocial
     bio: "Soy un apasionado por los videojuegos y la tecnología. Me encanta resolver puzles y trabajar en equipo. Busco una oportunidad para demostrar que mi silla no define mi código.",
     personalityTraits: ["Resiliente", "Curioso", "Gamer"],
-    hobbies: ["League of Legends", "Impresión 3D", "Anime"]
+    hobbies: ["Videojuegos", "Programacion", "Anime"]
 };
 
 export const MOCK_STUDENTS_DB: StudentProfile[] = [

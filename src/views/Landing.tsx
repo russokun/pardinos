@@ -24,10 +24,10 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
             <BackgroundAnimation />
 
             <header className="relative z-10 p-6 flex justify-center items-center max-w-6xl mx-auto w-full">
-                <div className="flex items-center justify-center gap-8 md:gap-16">
-                    <img src="/images/teletonlogonb.png" alt="Logo Teletón" className="h-24 md:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
-                    <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-24 md:h-36 w-auto object-contain animate-fade-in" />
-                    <img src="/images/bhlogonb.png" alt="Logo Bendita Hackathon" className="h-16 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                <div className="flex items-center justify-center gap-2 md:gap-16">
+                    <img src="/images/teletonlogonb.png" alt="Logo Teletón" className="h-20 md:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                    <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-28 md:h-36 w-auto object-contain animate-fade-in" />
+                    <img src="/images/bhlogonb.png" alt="Logo Bendita Hackathon" className="h-20 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
                 </div>
             </header>
 
