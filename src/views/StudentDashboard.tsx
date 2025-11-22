@@ -28,18 +28,28 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             <div className="bg-gradient-to-r from-brand-red to-brand-purple p-1">
                 <div className="bg-base-950 px-6 py-8">
                     <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-                        <div>
-                            <div className="flex items-center gap-3 mb-2">
-                                <h1 className="text-3xl font-black">Hola, {student.name}</h1>
-                                <Badge variant="purple">{student.gradeOrYear}</Badge>
-                            </div>
-                            <p className="text-slate-400 flex items-center gap-2 mb-2">
-                                <MapPin className="w-4 h-4" /> {student.commune}, {student.region}
-                            </p>
-                            {/* Progress Bar for Profile Completion */}
-                            <div className="flex items-center gap-2 text-sm text-brand-purple font-bold bg-brand-purple/10 px-3 py-1 rounded-full w-fit">
-                                <PenTool className="w-4 h-4" />
-                                ¡Completa tu perfil psicosocial para que te encuentren los padrinos!
+                        <div className="flex items-center gap-4 w-full md:w-auto">
+                            <Button
+                                variant="ghost"
+                                onClick={() => setView('landing')}
+                                className="shrink-0"
+                                icon={<ArrowRight className="w-4 h-4 rotate-180" />}
+                            >
+                                Volver
+                            </Button>
+                            <div className="flex-1">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <h1 className="text-3xl font-black">Hola, {student.name}</h1>
+                                    <Badge variant="purple">{student.gradeOrYear}</Badge>
+                                </div>
+                                <p className="text-slate-400 flex items-center gap-2 mb-2">
+                                    <MapPin className="w-4 h-4" /> {student.commune}, {student.region}
+                                </p>
+                                {/* Progress Bar for Profile Completion */}
+                                <div className="flex items-center gap-2 text-sm text-brand-purple font-bold bg-brand-purple/10 px-3 py-1 rounded-full w-fit">
+                                    <PenTool className="w-4 h-4" />
+                                    ¡Completa tu perfil psicosocial para que te encuentren los padrinos!
+                                </div>
                             </div>
                         </div>
                         <Button variant="primary" onClick={() => setView('student-profile')} icon={<User className="w-4 h-4" />}>
