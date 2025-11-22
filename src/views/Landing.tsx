@@ -25,15 +25,15 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
 
             <header className="relative z-10 p-6 flex justify-center items-center max-w-6xl mx-auto w-full">
                 <div className="flex items-center justify-center gap-2 md:gap-16">
-                    <img src="/images/teletonlogonb.png" alt="Logo Teletón" className="h-20 md:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
-                    <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-28 md:h-36 w-auto object-contain animate-fade-in" />
-                    <img src="/images/bhlogonb.png" alt="Logo Bendita Hackathon" className="h-20 md:h-20 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                    <img src="/images/teletonlogonb.png" alt="Logo Teletón" className="h-32 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                    <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-40 md:h-48 w-auto object-contain animate-fade-in" />
+                    <img src="/images/bhlogonb.png" alt="Logo Bendita Hackathon" className="h-32 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
                 </div>
             </header>
 
             <main className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 max-w-4xl mx-auto mt-5">
                 <Badge variant="red" className="mb-6 animate-pulse-slow">Teletón x Bendita Hackathon</Badge>
-                <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight tracking-tight">
+                <h1 className="text-3xl md:text-5xl font-black mb-6 leading-tight tracking-tight">
                     Conectando <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-purple">Talento y Oportunidades</span>
                 </h1>
                 <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
