@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Padrinos Teletón - Teletón x Bendita Hackathon</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              // Base Dark Theme (Neutral Dark Slate for High Contrast)
-              base: {
-                900: '#1e293b', // Slate 800
-                950: '#0f172a', // Slate 900 (Darker background)
-              },
-              // Brand Accents (Teletón x Bendita Hackathon)
-              brand: {
-                red: '#D91A2A',    // Teletón Red (Primary / Heart)
-                white: '#ffffff',  // High Contrast Text
-                purple: '#7c3aed', // Bendita Hackathon Purple (Tech / Secondary)
-                alert: '#fbbf24'   // Amber for Warnings
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Padrinos Teletón - Teletón x Bendita Hackathon</title>
+  <link rel="icon" type="image/png" href="/images/logonobackground.png" />
+  <link rel="apple-touch-icon" href="/images/logonobackground.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Base Dark Theme (Neutral Dark Slate for High Contrast)
+            base: {
+              900: '#1e293b', // Slate 800
+              950: '#0f172a', // Slate 900 (Darker background)
             },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+            // Brand Accents (Teletón x Bendita Hackathon)
+            brand: {
+              red: '#D91A2A',    // Teletón Red (Primary / Heart)
+              white: '#ffffff',  // High Contrast Text
+              purple: '#7c3aed', // Bendita Hackathon Purple (Tech / Secondary)
+              alert: '#fbbf24'   // Amber for Warnings
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            'bounce-slow': 'bounce 3s infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'fade-in': 'fadeIn 0.5s ease-out forwards',
+            'float': 'float 15s linear infinite',
+            'float-rotate': 'floatRotate 20s linear infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
             },
-            animation: {
-              'bounce-slow': 'bounce 3s infinite',
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'fade-in': 'fadeIn 0.5s ease-out forwards',
-              'float': 'float 15s linear infinite',
-              'float-rotate': 'floatRotate 20s linear infinite',
+            float: {
+              '0%': { transform: 'translateY(120vh) translateX(0) scale(0.8)', opacity: '0' },
+              '10%': { opacity: '0.4' },
+              '50%': { transform: 'translateY(50vh) translateX(20px) scale(1)' },
+              '90%': { opacity: '0.4' },
+              '100%': { transform: 'translateY(-20vh) translateX(-20px) scale(1.2)', opacity: '0' },
             },
-            keyframes: {
-              fadeIn: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              float: {
-                '0%': { transform: 'translateY(120vh) translateX(0) scale(0.8)', opacity: '0' },
-                '10%': { opacity: '0.4' },
-                '50%': { transform: 'translateY(50vh) translateX(20px) scale(1)' },
-                '90%': { opacity: '0.4' },
-                '100%': { transform: 'translateY(-20vh) translateX(-20px) scale(1.2)', opacity: '0' },
-              },
-              floatRotate: {
-                 '0%': { transform: 'translateY(120vh) rotate(0deg)', opacity: '0' },
-                 '10%': { opacity: '0.3' },
-                 '100%': { transform: 'translateY(-20vh) rotate(360deg)', opacity: '0' },
-              }
+            floatRotate: {
+              '0%': { transform: 'translateY(120vh) rotate(0deg)', opacity: '0' },
+              '10%': { opacity: '0.3' },
+              '100%': { transform: 'translateY(-20vh) rotate(360deg)', opacity: '0' },
             }
           }
         }
       }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
   <script type="importmap">
 {
   "imports": {
@@ -68,10 +71,12 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body class="bg-base-950 text-white antialiased selection:bg-brand-red selection:text-white font-sans">
-    <div id="root"></div>
+
+<body class="bg-base-950 text-white antialiased selection:bg-brand-red selection:text-white font-sans">
+  <div id="root"></div>
   <script type="module" src="/src/index.tsx"></script>
 </body>
+
 </html>
