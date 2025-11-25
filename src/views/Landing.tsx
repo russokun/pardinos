@@ -23,11 +23,11 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
             {/* Floating Particles Animation */}
             <BackgroundAnimation />
 
-            <header className="relative z-10 p-6 flex justify-center items-center max-w-6xl mx-auto w-full">
-                <div className="flex items-center justify-center gap-2 md:gap-16">
-                    <img src="/images/teletonlogonb.png" alt="Logo Teletón" className="h-32 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
-                    <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-40 md:h-48 w-auto object-contain animate-fade-in" />
-                    <img src="/images/bhlogonb.png" alt="Logo Bendita Hackathon" className="h-32 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+            <header className="relative z-10 p-4 md:p-6 flex justify-center items-center max-w-6xl mx-auto w-full">
+                <div className="flex items-center justify-center gap-3 sm:gap-8 md:gap-16 w-full">
+                    <img src="/images/teletonlogonb.png" alt="Logo Teletón" className="h-14 sm:h-24 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                    <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-20 sm:h-32 md:h-48 w-auto object-contain animate-fade-in" />
+                    <img src="/images/bhlogonb.png" alt="Logo Bendita Hackathon" className="h-14 sm:h-24 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
                 </div>
             </header>
 
@@ -37,7 +37,7 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
                     Conectando <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-purple">Talento y Oportunidades</span>
                 </h1>
                 <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
-                    Plataforma profesional donde empresas encuentran talento diverso y jóvenes acceden a oportunidades reales de desarrollo.
+                    Plataforma donde Padrinos encuentran Talentos Jóvenes y estos acceden a oportunidades reales de empleabilidad y desarrollo.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6 w-full max-w-2xl mb-5">
@@ -45,16 +45,16 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
                         <div className="w-14 h-14 bg-brand-red/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-red group-hover:text-white transition-colors text-brand-red">
                             <User className="w-8 h-8" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-2 group-hover:text-brand-red transition-colors">Soy Profesional</h3>
-                        <p className="text-slate-400 text-sm">Explora oportunidades de mentoría y desarrollo profesional.</p>
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-brand-red transition-colors">Soy Talento Joven</h3>
+                        <p className="text-slate-400 text-sm">Explora oportunidades de mentoría, acompañamiento y desarrollo profesional.</p>
                     </Card>
 
                     <Card className="text-left hover:border-brand-purple hover:scale-[1.02] active:scale-95 transition-all duration-200 group cursor-pointer bg-gradient-to-b from-base-900 to-base-950 relative z-20" onClick={() => setView('company-talent-scout')}>
                         <div className="w-14 h-14 bg-brand-purple/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-purple group-hover:text-white transition-colors text-brand-purple">
                             <HeartHandshake className="w-8 h-8" />
                         </div>
-                        <h3 className="text-2xl font-bold mb-2 group-hover:text-brand-purple transition-colors">Soy Empresa</h3>
-                        <p className="text-slate-400 text-sm">Descubre talento diverso para tu equipo y mentoriza profesionales.</p>
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-brand-purple transition-colors">Soy Padrino/Madrina</h3>
+                        <p className="text-slate-400 text-sm">Descubre Talentos Jóvenes para tu equipo, mentorízalos y apoya su desarrollo profesional.</p>
                     </Card>
                 </div>
             </main>

@@ -25,34 +25,53 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
 
     return (
         <div className="min-h-screen bg-base-950 pb-20">
-            <div className="bg-gradient-to-r from-brand-red to-brand-purple p-1">
-                <div className="bg-base-950 px-6 py-8">
-                    <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-                        <div className="flex items-center gap-4 w-full md:w-auto">
+            <div className="bg-base-950 p-4 md:p-6">
+                <div className="max-w-4xl mx-auto bg-base-900 rounded-3xl p-6 border border-white/5 relative overflow-hidden">
+                    {/* Gradient Border Effect */}
+                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-brand-red to-brand-purple"></div>
+                    <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-brand-purple to-brand-red"></div>
+
+                    <div className="flex flex-col relative z-10">
+                        {/* Top Row: Volver & Semester */}
+                        <div className="flex justify-between items-start mb-4">
                             <Button
                                 variant="ghost"
                                 onClick={() => setView('landing')}
-                                className="shrink-0"
+                                className="bg-white/5 hover:bg-white/10 text-sm px-4 py-2 h-auto rounded-xl border border-white/10"
                                 icon={<ArrowRight className="w-4 h-4 rotate-180" />}
                             >
                                 Volver
                             </Button>
-                            <div className="flex-1">
-                                <div className="flex items-center gap-3 mb-2">
-                                    <h1 className="text-3xl font-black">Hola, {student.name}</h1>
-                                    <Badge variant="purple">{student.gradeOrYear}</Badge>
-                                </div>
-                                <p className="text-slate-400 flex items-center gap-2 mb-2">
-                                    <MapPin className="w-4 h-4" /> {student.commune}, {student.region}
-                                </p>
-                                {/* Progress Bar for Profile Completion */}
-                                <div className="flex items-center gap-2 text-sm text-brand-purple font-bold bg-brand-purple/10 px-3 py-1 rounded-full w-fit">
-                                    <PenTool className="w-4 h-4" />
-                                    Completa tu perfil profesional para destacar ante empresas
-                                </div>
+                            <div className="px-3 py-1 rounded-full border border-brand-purple/50 bg-brand-purple/10 text-xs font-bold text-brand-purple uppercase tracking-wider">
+                                {student.gradeOrYear}
                             </div>
                         </div>
-                        <Button variant="primary" onClick={() => setView('student-profile')} icon={<User className="w-4 h-4" />}>
+
+                        {/* Name & Location */}
+                        <div className="mb-6">
+                            <h1 className="text-4xl font-black mb-2 leading-tight">
+                                Hola, {student.name} !
+                            </h1>
+                            <p className="text-slate-400 flex items-center gap-2 text-sm">
+                                <MapPin className="w-4 h-4 text-slate-500" /> {student.commune}, {student.region}
+                            </p>
+                        </div>
+
+                        {/* CTA Bubble */}
+                        <div className="bg-brand-purple/10 border border-brand-purple/20 rounded-2xl rounded-tl-none p-4 mb-8 max-w-xs ml-4 relative">
+                            <div className="absolute -left-2 top-0 w-4 h-4 bg-brand-purple/10 border-l border-t border-brand-purple/20 transform -rotate-45"></div>
+                            <p className="text-brand-purple font-bold text-sm leading-relaxed">
+                                Completa tu perfil de Talento para destacar ante Padrinos
+                            </p>
+                        </div>
+
+                        {/* Edit Profile Button */}
+                        <Button
+                            variant="primary"
+                            onClick={() => setView('student-profile')}
+                            className="w-full py-4 text-lg font-bold rounded-xl shadow-lg shadow-brand-red/20"
+                            icon={<User className="w-5 h-5" />}
+                        >
                             Editar Mi Perfil
                         </Button>
                     </div>
@@ -62,9 +81,9 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             <div className="max-w-4xl mx-auto px-6 py-8 space-y-8">
                 <section>
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <Sparkles className="text-brand-red" /> Oportunidades de Desarrollo
+                        <Sparkles className="text-brand-red" /> Oportunidades de Padrinazgo
                     </h2>
-                    <p className="text-slate-400 mb-6">Conecta con empresas líderes que buscan talento como el tuyo. Aplica a las oportunidades que mejor se alineen con tus objetivos profesionales.</p>
+                    <p className="text-slate-400 mb-6">Conecta con Padrinos líderes que buscan talento como el tuyo. Aplica a las oportunidades que mejor se alineen con tus objetivos.</p>
 
                     <div className="grid gap-6">
                         {experiences.map((exp) => (

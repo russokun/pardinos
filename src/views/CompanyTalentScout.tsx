@@ -19,35 +19,50 @@ export const CompanyTalentScout: React.FC<CompanyTalentScoutProps> = ({
 }) => {
     return (
         <div className="min-h-screen bg-base-950">
-            <div className="bg-base-900 border-b border-white/10 px-6 py-6 sticky top-0 z-40 shadow-xl">
-                <div className="max-w-6xl mx-auto flex justify-between items-center">
-                    <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-brand-purple rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                            {company.logoChar}
+            <div className="bg-base-900 border-b border-white/10 sticky top-0 z-40 shadow-xl">
+                <div className="max-w-6xl mx-auto px-4 py-4">
+                    <div className="flex flex-col gap-4">
+                        {/* Top Bar: Company Info & Logout */}
+                        <div className="flex justify-between items-start">
+                            <div className="flex items-center gap-3">
+                                <div className="w-12 h-12 bg-brand-purple rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-brand-purple/20">
+                                    {company.logoChar}
+                                </div>
+                                <div>
+                                    <h1 className="text-2xl font-black leading-none mb-1">{company.name}</h1>
+                                    <p className="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Modo Padrino Activado</p>
+                                </div>
+                            </div>
+                            <Button
+                                variant="ghost"
+                                onClick={() => setView('landing')}
+                                className="text-slate-400 hover:text-white p-2 h-auto"
+                            >
+                                <span className="sr-only">Cerrar Sesión</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" x2="9" y1="12" y2="12" /></svg>
+                            </Button>
                         </div>
-                        <div>
-                            <h1 className="text-xl font-bold">{company.name}</h1>
-                            <p className="text-slate-400 text-xs uppercase font-bold tracking-wider">Modo Padrino Activado</p>
+
+                        {/* Action Bar */}
+                        <div className="flex justify-end">
+                            <Button
+                                variant="primary"
+                                onClick={() => setView('company-create-post')}
+                                className="w-full sm:w-auto shadow-lg shadow-brand-red/20 py-3 text-base font-bold"
+                                icon={<Plus className="w-5 h-5" />}
+                            >
+                                Crear Oportunidad
+                            </Button>
                         </div>
-                    </div>
-                    <div className="flex gap-3">
-                        <Button
-                            variant="primary"
-                            onClick={() => setView('company-create-post')}
-                            icon={<Plus className="w-4 h-4" />}
-                        >
-                            Crear Oportunidad
-                        </Button>
-                        <Button variant="ghost" onClick={() => setView('landing')}>Cerrar Sesión</Button>
                     </div>
                 </div>
             </div>
 
             <div className="max-w-6xl mx-auto px-6 py-8">
                 <div className="text-center mb-10">
-                    <h2 className="text-3xl font-black mb-3">Descubre Talento Diverso</h2>
+                    <h2 className="text-3xl font-black mb-3">Descubre Talentos Jóvenes</h2>
                     <p className="text-slate-400 max-w-2xl mx-auto">
-                        Explora perfiles de profesionales talentosos. Evalúa habilidades, experiencia y fit cultural para tu equipo.
+                        Explora perfiles de Talentos Jóvenes. Evalúa habilidades, experiencia y fit cultural para tu equipo.
                     </p>
                 </div>
 
