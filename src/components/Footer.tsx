@@ -15,8 +15,18 @@ export const Footer: React.FC = () => {
                             Plataforma profesional que conecta talento diverso con empresas líderes. Facilitamos oportunidades de desarrollo, mentoría y crecimiento profesional.
                         </p>
                         <div className="flex gap-4">
-                            {[Github, Linkedin, Twitter].map((Icon, i) => (
-                                <a key={i} href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-brand-purple hover:text-white transition-all">
+                            {[
+                                { Icon: Github, href: "https://github.com/russokun/padrinos-teleton" },
+                                { Icon: Linkedin, href: "#" },
+                                { Icon: Twitter, href: "#" }
+                            ].map(({ Icon, href }, i) => (
+                                <a
+                                    key={i}
+                                    href={href}
+                                    target={href.startsWith('http') ? "_blank" : undefined}
+                                    rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
+                                    className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-400 hover:bg-brand-purple hover:text-white transition-all"
+                                >
                                     <Icon className="w-5 h-5" />
                                 </a>
                             ))}
