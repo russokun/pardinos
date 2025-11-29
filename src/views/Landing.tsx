@@ -25,9 +25,15 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
 
             <header className="relative z-10 p-4 md:p-6 flex justify-center items-center max-w-6xl mx-auto w-full">
                 <div className="flex items-center justify-center gap-3 sm:gap-8 md:gap-16 w-full">
-                    <img src="/images/teletonlogonb.png" alt="Logo Teletón" className="h-14 sm:h-24 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
-                    <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-20 sm:h-32 md:h-48 w-auto object-contain animate-fade-in" />
-                    <img src="/images/bhlogonb.png" alt="Logo Bendita Hackathon" className="h-14 sm:h-24 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                    <a href="https://evento.teleton.cl/" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform duration-200">
+                        <img src="/images/teletonlogonb.png" alt="Logo Teletón" className="h-14 sm:h-24 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                    </a>
+                    <a href="https://padrinosteleton.netlify.app/" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform duration-200">
+                        <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-20 sm:h-32 md:h-48 w-auto object-contain animate-fade-in" />
+                    </a>
+                    <a href="https://bendita-hackathon-ia.lovable.app/" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform duration-200">
+                        <img src="/images/bhlogonb.png" alt="Logo Bendita Hackathon" className="h-14 sm:h-24 md:h-40 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                    </a>
                 </div>
             </header>
 

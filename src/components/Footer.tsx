@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Mail, Phone, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin, Github } from 'lucide-react';
 
 export const Footer: React.FC = () => {
     return (
@@ -16,9 +16,7 @@ export const Footer: React.FC = () => {
                         </p>
                         <div className="flex gap-4">
                             {[
-                                { Icon: Github, href: "https://github.com/russokun/padrinos-teleton" },
-                                { Icon: Linkedin, href: "#" },
-                                { Icon: Twitter, href: "#" }
+                                { Icon: Github, href: "https://github.com/russokun/padrinos-teleton" }
                             ].map(({ Icon, href }, i) => (
                                 <a
                                     key={i}
