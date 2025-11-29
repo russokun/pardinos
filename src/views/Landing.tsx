@@ -43,7 +43,7 @@ export const Landing: React.FC<LandingProps> = ({ setView }) => {
                     Conectando <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-purple">Talento y Oportunidades</span>
                 </h1>
                 <p className="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
-                    Plataforma donde Padrinos encuentran Talentos Jóvenes y estos acceden a oportunidades reales de empleabilidad y desarrollo.
+                    Plataforma donde Empresas apadrinan Talentos Jóvenes y estos acceden a oportunidades reales de empleabilidad y desarrollo profesional.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6 w-full max-w-2xl mb-5">
