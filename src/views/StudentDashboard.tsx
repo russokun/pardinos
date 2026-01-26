@@ -5,6 +5,7 @@ import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
 import { Card } from '../components/ui/Card';
 import { FeatureTag } from '../components/ui/FeatureTag';
+import { useLanguage, LanguageSwitch } from '../services/LanguageContext';
 
 interface StudentDashboardProps {
     student: StudentProfile;
@@ -21,6 +22,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
     onApply,
     speakText
 }) => {
+    const { t } = useLanguage();
     const [selectedExp, setSelectedExp] = useState<Experience | null>(null);
 
     return (
@@ -40,17 +42,20 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                                 className="bg-white/5 hover:bg-white/10 text-sm px-4 py-2 h-auto rounded-xl border border-white/10"
                                 icon={<ArrowRight className="w-4 h-4 rotate-180" />}
                             >
-                                Volver
+                                {t('common.back')}
                             </Button>
-                            <div className="px-3 py-1 rounded-full border border-brand-purple/50 bg-brand-purple/10 text-xs font-bold text-brand-purple uppercase tracking-wider">
-                                {student.gradeOrYear}
+                            <div className="flex items-center gap-4">
+                                <LanguageSwitch />
+                                <div className="px-3 py-1 rounded-full border border-brand-purple/50 bg-brand-purple/10 text-xs font-bold text-brand-purple uppercase tracking-wider">
+                                    {student.gradeOrYear}
+                                </div>
                             </div>
                         </div>
 
                         {/* Name & Location */}
                         <div className="mb-6">
                             <h1 className="text-4xl font-black mb-2 leading-tight">
-                                Hola, {student.name} !
+                                {t('student.dashboard.welcome')} {student.name}!
                             </h1>
                             <p className="text-slate-400 flex items-center gap-2 text-sm">
                                 <MapPin className="w-4 h-4 text-slate-500" /> {student.commune}, {student.region}
@@ -61,7 +66,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                         <div className="bg-brand-purple/10 border border-brand-purple/20 rounded-2xl rounded-tl-none p-4 mb-8 max-w-xs ml-4 relative">
                             <div className="absolute -left-2 top-0 w-4 h-4 bg-brand-purple/10 border-l border-t border-brand-purple/20 transform -rotate-45"></div>
                             <p className="text-brand-purple font-bold text-sm leading-relaxed">
-                                Potencia tu "Viaje Heroico" completando tu perfil para conectar con un Mentor
+                                {t('student.dashboard.cta')}
                             </p>
                         </div>
 
@@ -72,7 +77,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                             className="w-full py-4 text-lg font-bold rounded-xl shadow-lg shadow-brand-red/20"
                             icon={<User className="w-5 h-5" />}
                         >
-                            Editar Mi Perfil
+                            {t('student.dashboard.editProfile')}
                         </Button>
                     </div>
                 </div>
@@ -81,9 +86,9 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             <div className="max-w-4xl mx-auto px-6 py-8 space-y-8">
                 <section>
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <Sparkles className="text-brand-red" /> Tu Viaje Heroico: Oportunidades
+                        <Sparkles className="text-brand-red" /> {t('student.dashboard.opportunities.title')}
                     </h2>
-                    <p className="text-slate-400 mb-6">Conecta con Mentores que serán tus referentes en el mundo profesional. Encuentra el apoyo para conquistar tu carrera.</p>
+                    <p className="text-slate-400 mb-6">{t('student.dashboard.opportunities.desc')}</p>
 
                     <div className="grid gap-6">
                         {experiences.map((exp) => (

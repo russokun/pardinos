@@ -3,6 +3,7 @@ import { User, Sparkles, Heart, Plus } from 'lucide-react';
 import { StudentProfile, CompanyProfile, ViewState } from '../types/index';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
+import { useLanguage, LanguageSwitch } from '../services/LanguageContext';
 
 interface CompanyTalentScoutProps {
     company: CompanyProfile;
@@ -17,6 +18,7 @@ export const CompanyTalentScout: React.FC<CompanyTalentScoutProps> = ({
     setView,
     onSponsor
 }) => {
+    const { t } = useLanguage();
     return (
         <div className="min-h-screen bg-base-950">
             <div className="bg-base-900 border-b border-white/10 sticky top-0 z-40 shadow-xl">
@@ -30,17 +32,20 @@ export const CompanyTalentScout: React.FC<CompanyTalentScoutProps> = ({
                                 </div>
                                 <div>
                                     <h1 className="text-2xl font-black leading-none mb-1">{company.name}</h1>
-                                    <p className="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Modo Pardino/Madrina: Propósito en Evolución</p>
+                                    <p className="text-slate-400 text-[10px] uppercase font-bold tracking-widest">{t('company.scout.status')}</p>
                                 </div>
                             </div>
-                            <Button
-                                variant="ghost"
-                                onClick={() => setView('landing')}
-                                className="text-slate-400 hover:text-white p-2 h-auto"
-                            >
-                                <span className="sr-only">Cerrar Sesión</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" x2="9" y1="12" y2="12" /></svg>
-                            </Button>
+                            <div className="flex items-center gap-4">
+                                <LanguageSwitch />
+                                <Button
+                                    variant="ghost"
+                                    onClick={() => setView('landing')}
+                                    className="text-slate-400 hover:text-white p-2 h-auto"
+                                >
+                                    <span className="sr-only">Cerrar Sesión</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" x2="9" y1="12" y2="12" /></svg>
+                                </Button>
+                            </div>
                         </div>
 
                         {/* Action Bar */}
@@ -51,7 +56,7 @@ export const CompanyTalentScout: React.FC<CompanyTalentScoutProps> = ({
                                 className="w-full sm:w-auto shadow-lg shadow-brand-red/20 py-3 text-base font-bold"
                                 icon={<Plus className="w-5 h-5" />}
                             >
-                                Crear Oportunidad
+                                {t('company.scout.createOpportunity')}
                             </Button>
                         </div>
                     </div>
@@ -60,9 +65,9 @@ export const CompanyTalentScout: React.FC<CompanyTalentScoutProps> = ({
 
             <div className="max-w-6xl mx-auto px-6 py-8">
                 <div className="text-center mb-10">
-                    <h2 className="text-3xl font-black mb-3">Guía un Viaje Heroico</h2>
+                    <h2 className="text-3xl font-black mb-3">{t('company.scout.title')}</h2>
                     <p className="text-slate-400 max-w-2xl mx-auto">
-                        Descubre jóvenes con historias de resiliencia y talento. Sé el referente que necesitan para transformar su potencial en capital humano de excelencia.
+                        {t('company.scout.subtitle')}
                     </p>
                 </div>
 

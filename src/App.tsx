@@ -10,8 +10,17 @@ import { StudentDashboard } from './views/StudentDashboard';
 import { StudentProfileView } from './views/StudentProfile';
 import { CompanyTalentScout } from './views/CompanyTalentScout';
 import { CompanyCreatePost } from './views/CompanyCreatePost';
+import { LanguageProvider } from './services/LanguageContext';
 
 export default function App() {
+    return (
+        <LanguageProvider>
+            <AppContent />
+        </LanguageProvider>
+    );
+}
+
+function AppContent() {
     const [view, setView] = useState<ViewState>('landing');
     const [student, setStudent] = useState<StudentProfile>(INITIAL_STUDENT);
     const [company, setCompany] = useState<CompanyProfile>(INITIAL_COMPANY);

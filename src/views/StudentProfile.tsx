@@ -5,6 +5,7 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Label, Input, Select } from '../components/ui/Input';
 import { DISABILITY_OPTIONS } from '../data/constants';
+import { useLanguage, LanguageSwitch } from '../services/LanguageContext';
 
 interface StudentProfileProps {
     student: StudentProfile;
@@ -13,6 +14,7 @@ interface StudentProfileProps {
 }
 
 export const StudentProfileView: React.FC<StudentProfileProps> = ({ student, setStudent, setView }) => {
+    const { t } = useLanguage();
     const toggleDisability = (disability: string) => {
         const current = student.specificConditions || [];
         const updated = current.includes(disability)
@@ -24,16 +26,18 @@ export const StudentProfileView: React.FC<StudentProfileProps> = ({ student, set
     return (
         <div className="min-h-screen bg-base-950 p-6">
             <div className="max-w-3xl mx-auto">
-                <Button variant="ghost" onClick={() => setView('student-dashboard')} className="mb-6 pl-0 hover:bg-transparent hover:text-brand-red">
-                    ← Volver al Dashboard
-                </Button>
+                <div className="flex justify-between items-center mb-6">
+                    <Button variant="ghost" onClick={() => setView('student-dashboard')} className="pl-0 hover:bg-transparent hover:text-brand-red">
+                        ← {t('student.profile.back')}
+                    </Button>
+                </div>
 
                 <Card className="border-brand-purple/30">
                     <h2 className="text-3xl font-black mb-6 flex items-center gap-3">
                         <div className="w-12 h-12 bg-brand-red rounded-xl flex items-center justify-center">
                             <PenTool className="w-6 h-6 text-white" />
                         </div>
-                        Editor de Perfil Completo
+                        {t('student.profile.title')}
                     </h2>
 
                     <div className="space-y-10">
@@ -41,7 +45,7 @@ export const StudentProfileView: React.FC<StudentProfileProps> = ({ student, set
                         {/* SECCIÓN 1: DATOS GENERALES */}
                         <section className="space-y-4">
                             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/10 pb-2">
-                                <Info className="text-brand-red" /> 1. Datos Generales
+                                <Info className="text-brand-red" /> {t('student.profile.general.title')}
                             </h3>
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div>
@@ -96,10 +100,10 @@ export const StudentProfileView: React.FC<StudentProfileProps> = ({ student, set
                         {/* SECCIÓN 2: DISCAPACIDAD FÍSICA Y ACCESIBILIDAD (PRIORIDAD) */}
                         <section className="space-y-4">
                             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/10 pb-2">
-                                <Accessibility className="text-brand-red" /> 2. Condición Física y Accesibilidad
+                                <Accessibility className="text-brand-red" /> {t('student.profile.section2')}
                             </h3>
                             <p className="text-slate-400 text-sm mb-4">
-                                Selecciona todas las condiciones que apliquen a tu situación. Esto nos ayuda a buscar entornos seguros para ti.
+                                {t('student.profile.section2Desc')}
                             </p>
 
                             <div className="grid md:grid-cols-2 gap-3 mb-4">
@@ -134,14 +138,14 @@ export const StudentProfileView: React.FC<StudentProfileProps> = ({ student, set
                         {/* SECCIÓN 3: PERFIL PSICOSOCIAL */}
                         <section className="space-y-4">
                             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2 border-b border-white/10 pb-2">
-                                <Smile className="text-brand-purple" /> 3. Perfil Psicosocial (Tu Personalidad)
+                                <Smile className="text-brand-purple" /> {t('student.profile.section3')}
                             </h3>
 
                             {/* Personalidad */}
                             <div className="mb-6">
-                                <Label>¿Cómo te describes? (Selecciona tus rasgos)</Label>
+                                <Label>{t('student.profile.personality')}</Label>
                                 <div className="flex flex-wrap gap-2 mt-2">
-                                    {["Creativo", "Resiliente", "Líder", "Introvertido", "Extrovertido", "Curioso", "Analítico", "Colaborativo"].map(trait => (
+                                    {t('student.profile.traits').split(',').map(trait => (
                                         <button
                                             key={trait}
                                             onClick={() => {
@@ -160,7 +164,7 @@ export const StudentProfileView: React.FC<StudentProfileProps> = ({ student, set
 
                             {/* Hobbies */}
                             <div className="mb-6">
-                                <Label>Tus Pasiones y Hobbies</Label>
+                                <Label>{t('profile.hobbies')}</Label>
                                 <Input
                                     placeholder="Ej: Videojuegos, Anime, Fútbol, Cocina, Música..."
                                     value={student.hobbies.join(", ")}
@@ -171,10 +175,10 @@ export const StudentProfileView: React.FC<StudentProfileProps> = ({ student, set
 
                             {/* Bio */}
                             <div>
-                                <Label>Tu Biografía Corta</Label>
+                                <Label>{t('profile.bio')}</Label>
                                 <textarea
                                     className="w-full bg-base-950 border border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/50 focus:outline-none h-32 mt-2"
-                                    placeholder="Cuéntale a tu futuro Mentor quién eres, qué sueñas y qué te motiva en tu Viaje Heroico..."
+                                    placeholder={t('profile.bioPlaceholder')}
                                     value={student.bio}
                                     onChange={(e) => setStudent({ ...student, bio: e.target.value })}
                                 />
@@ -182,7 +186,7 @@ export const StudentProfileView: React.FC<StudentProfileProps> = ({ student, set
                         </section>
 
                         <Button onClick={() => setView('student-dashboard')} className="w-full py-4 text-lg" variant="primary">
-                            Guardar Perfil Completo
+                            {t('profile.save')}
                         </Button>
                     </div>
                 </Card>

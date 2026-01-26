@@ -4,6 +4,7 @@ import { ViewState, Experience, CompanyProfile, EducationLevel, AccessibilityFea
 import { Button } from '../components/ui/Button';
 import { Input, Label, Select, Checkbox } from '../components/ui/Input';
 import { Card } from '../components/ui/Card';
+import { useLanguage, LanguageSwitch } from '../services/LanguageContext';
 
 interface CompanyCreatePostProps {
     company: CompanyProfile;
@@ -16,6 +17,7 @@ export const CompanyCreatePost: React.FC<CompanyCreatePostProps> = ({
     setView,
     onCreatePost
 }) => {
+    const { t } = useLanguage();
     const [formData, setFormData] = useState({
         title: '',
         type: 'Mentoría' as Experience['type'],
@@ -98,16 +100,14 @@ export const CompanyCreatePost: React.FC<CompanyCreatePostProps> = ({
                         <Button
                             variant="ghost"
                             onClick={() => setView('company-talent-scout')}
-                            className="shrink-0"
+                            className="bg-white/5 hover:bg-white/10 text-sm px-4 py-2 h-auto rounded-xl border border-white/10"
                             icon={<ArrowRight className="w-4 h-4 rotate-180" />}
                         >
-                            Volver
+                            {t('common.back')}
                         </Button>
-                        <div>
-                            <h1 className="text-xl font-bold">Crear Nueva Oportunidad</h1>
-                            <p className="text-slate-400 text-xs">{company.name}</p>
-                        </div>
+                        <h1 className="text-xl font-black text-white ml-4">{t('company.create.title')}</h1>
                     </div>
+                    <LanguageSwitch />
                 </div>
             </div>
 
