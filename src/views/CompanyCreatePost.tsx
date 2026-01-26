@@ -68,7 +68,7 @@ export const CompanyCreatePost: React.FC<CompanyCreatePostProps> = ({
             tags: [],
             physicalFeatures,
             otherAccessibilityDetails,
-            aiExplanation: `Excelente oportunidad en ${company.name} para desarrollar tus habilidades profesionales.`,
+            aiExplanation: `Esta oportunidad en ${company.name} es el escenario perfecto para potenciar tu "Viaje Heroico" junto a un Pardino o Madrina referente.`,
             description: formData.description,
             mentor: formData.mentorName ? {
                 name: formData.mentorName,
@@ -244,17 +244,17 @@ export const CompanyCreatePost: React.FC<CompanyCreatePostProps> = ({
 
                         {/* Información del mentor (opcional) */}
                         <div className="border-t border-white/10 pt-6">
-                            <Label>Mentor/a Asignado/a (Opcional)</Label>
+                            <Label>Pardino/Madrina Referente (Opcional)</Label>
                             <div className="grid md:grid-cols-2 gap-4 mt-3">
                                 <Input
                                     value={formData.mentorName}
                                     onChange={(e) => setFormData({ ...formData, mentorName: e.target.value })}
-                                    placeholder="Nombre del mentor"
+                                    placeholder="Nombre del Pardino/Madrina"
                                 />
                                 <Input
                                     value={formData.mentorRole}
                                     onChange={(e) => setFormData({ ...formData, mentorRole: e.target.value })}
-                                    placeholder="Cargo del mentor"
+                                    placeholder="Cargo del Pardino/Madrina"
                                 />
                             </div>
                         </div>

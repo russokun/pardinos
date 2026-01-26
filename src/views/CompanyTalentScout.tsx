@@ -30,7 +30,7 @@ export const CompanyTalentScout: React.FC<CompanyTalentScoutProps> = ({
                                 </div>
                                 <div>
                                     <h1 className="text-2xl font-black leading-none mb-1">{company.name}</h1>
-                                    <p className="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Modo Padrino Activado</p>
+                                    <p className="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Modo Pardino/Madrina: Propósito en Evolución</p>
                                 </div>
                             </div>
                             <Button
@@ -60,9 +60,9 @@ export const CompanyTalentScout: React.FC<CompanyTalentScoutProps> = ({
 
             <div className="max-w-6xl mx-auto px-6 py-8">
                 <div className="text-center mb-10">
-                    <h2 className="text-3xl font-black mb-3">Descubre Talentos Jóvenes</h2>
+                    <h2 className="text-3xl font-black mb-3">Guía un Viaje Heroico</h2>
                     <p className="text-slate-400 max-w-2xl mx-auto">
-                        Explora perfiles de Talentos Jóvenes. Evalúa habilidades, experiencia y fit cultural para tu equipo.
+                        Descubre jóvenes con historias de resiliencia y talento. Sé el referente que necesitan para transformar su potencial en capital humano de excelencia.
                     </p>
                 </div>
 
@@ -120,14 +120,14 @@ export const CompanyTalentScout: React.FC<CompanyTalentScoutProps> = ({
                                     <div className="bg-brand-red/5 border border-brand-red/20 p-3 rounded-xl">
                                         <div className="flex items-center gap-2 mb-1">
                                             <Sparkles className="w-3 h-3 text-brand-red" />
-                                            <span className="text-xs font-bold text-brand-red uppercase">Por qué apadrinarlo</span>
+                                            <span className="text-xs font-bold text-brand-red uppercase">Por qué sumarlo a tu Pardinazgo</span>
                                         </div>
                                         <p className="text-xs text-slate-300">{matchAnalysis}</p>
                                     </div>
                                 </div>
 
                                 <Button onClick={() => onSponsor(profile)} variant="primary" className="w-full" icon={<Heart className="w-4 h-4 fill-current" />}>
-                                    Apadrinar Talento
+                                    Iniciar Viaje Evolutivo
                                 </Button>
                             </div>
                         </div>

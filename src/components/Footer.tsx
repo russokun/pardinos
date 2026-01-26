@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
                     {/* Brand Column */}
                     <div className="col-span-1 md:col-span-2">
                         <div className="flex items-center mb-6">
-                            <img src="/images/logonobackground.png" alt="Padrinos Teletón Logo" className="h-16 w-auto object-contain" />
+                            <img src="/images/pardinoslogo.png" alt="Pardinos Teletón Logo" className="h-16 w-auto object-contain" />
                         </div>
                         <p className="text-slate-400 leading-relaxed mb-6 max-w-md">
                             Plataforma profesional que conecta talento diverso con empresas líderes. Facilitamos oportunidades de desarrollo, mentoría y crecimiento profesional.
@@ -59,14 +59,14 @@ export const Footer: React.FC = () => {
                             </li>
                             <li className="flex items-center gap-3 text-slate-400 text-sm">
                                 <Mail className="w-5 h-5 text-brand-purple shrink-0" />
-                                <span>contacto@padrinosteleton.cl</span>
+                                <span>contacto@pardinosteleton.cl</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-                    <p>© 2025 Padrinos Teletón. Todos los derechos reservados.</p>
+                    <p>© 2025 Pardinos Teletón. Todos los derechos reservados.</p>
                     <div className="flex gap-6">
                         <a href="#" className="hover:text-white transition-colors">Privacidad</a>
                         <a href="#" className="hover:text-white transition-colors">Términos</a>

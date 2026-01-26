@@ -61,7 +61,7 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
                         <div className="bg-brand-purple/10 border border-brand-purple/20 rounded-2xl rounded-tl-none p-4 mb-8 max-w-xs ml-4 relative">
                             <div className="absolute -left-2 top-0 w-4 h-4 bg-brand-purple/10 border-l border-t border-brand-purple/20 transform -rotate-45"></div>
                             <p className="text-brand-purple font-bold text-sm leading-relaxed">
-                                Completa tu perfil de Talento para destacar ante Padrinos
+                                Potencia tu "Viaje Heroico" completando tu perfil para conectar con un Mentor
                             </p>
                         </div>
 
@@ -81,9 +81,9 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({
             <div className="max-w-4xl mx-auto px-6 py-8 space-y-8">
                 <section>
                     <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <Sparkles className="text-brand-red" /> Oportunidades de Padrinazgo
+                        <Sparkles className="text-brand-red" /> Tu Viaje Heroico: Oportunidades
                     </h2>
-                    <p className="text-slate-400 mb-6">Conecta con Padrinos líderes que buscan talento como el tuyo. Aplica a las oportunidades que mejor se alineen con tus objetivos.</p>
+                    <p className="text-slate-400 mb-6">Conecta con Mentores que serán tus referentes en el mundo profesional. Encuentra el apoyo para conquistar tu carrera.</p>
 
                     <div className="grid gap-6">
                         {experiences.map((exp) => (

@@ -174,7 +174,7 @@ export const StudentProfileView: React.FC<StudentProfileProps> = ({ student, set
                                 <Label>Tu Biografía Corta</Label>
                                 <textarea
                                     className="w-full bg-base-950 border border-white/20 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/50 focus:outline-none h-32 mt-2"
-                                    placeholder="Cuéntale a tu futuro mentor quién eres, qué sueñas y qué te motiva..."
+                                    placeholder="Cuéntale a tu futuro Mentor quién eres, qué sueñas y qué te motiva en tu Viaje Heroico..."
                                     value={student.bio}
                                     onChange={(e) => setStudent({ ...student, bio: e.target.value })}
                                 />

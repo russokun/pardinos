@@ -257,8 +257,8 @@ export const INITIAL_EXPERIENCES: Experience[] = [
         ],
         otherAccessibilityDetails: "Sesiones por Zoom con subtítulos automáticos.",
         mentor: { name: "Andrés", role: "Senior Developer", avatarChar: "A" },
-        aiExplanation: "Aprende desarrollo web con un mentor senior que cree en tu potencial.",
-        description: "Construye proyectos reales mientras aprendes las mejores prácticas de la industria."
+        aiExplanation: "Aprende desarrollo web con un Pardino Senior que te guiará en tu Viaje Heroico. Su resiliencia potenciará tu talento.",
+        description: "Construye proyectos reales mientras aprendes las mejores prácticas de la industria de la mano de un referente."
     },
     {
         id: "exp-3",
@@ -320,8 +320,8 @@ export const INITIAL_EXPERIENCES: Experience[] = [
         ],
         otherAccessibilityDetails: "Sala de reuniones en primer piso.",
         mentor: { name: "Roberto", role: "Director de Operaciones", avatarChar: "R" },
-        aiExplanation: "Potencia tus habilidades de liderazgo con un ejecutivo senior.",
-        description: "Aprende a liderar equipos, gestionar proyectos y tomar decisiones estratégicas."
+        aiExplanation: "Potencia tus habilidades de liderazgo e inicia tu Viaje Evolutivo con un Pardino ejecutivo senior.",
+        description: "Aprende a liderar equipos, gestionar proyectos y tomar decisiones estratégicas junto a un referente del mundo corporativo."
     },
     {
         id: "exp-6",
