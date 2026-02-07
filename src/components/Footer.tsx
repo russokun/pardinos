@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
                         </p>
                         <div className="flex gap-4">
                             {[
-                                { Icon: Github, href: "https://github.com/russokun/padrinos-teleton" }
+                                { Icon: Github, href: "https://github.com/russokun/pardinos" }
                             ].map(({ Icon, href }, i) => (
                                 <a
                                     key={i}
@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
                 </div>
 
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-                    <p>© 2025 Pardinos Teletón. {t('footer.rights')}</p>
+                    <p>© 2026 Pardinos Teletón. {t('footer.rights')}</p>
                     <div className="flex gap-6">
                         <a href="#" className="hover:text-white transition-colors">{t('footer.privacy')}</a>
                         <a href="#" className="hover:text-white transition-colors">{t('footer.terms')}</a>

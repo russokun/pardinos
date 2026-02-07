@@ -1,6 +1,6 @@
 {
-  "name": "Padrinos Teletón",
-  "description": "Plataforma de apadrinamiento laboral inclusivo para estudiantes.",
+  "name": "Pardinos Teletón",
+  "description": "Plataforma de apardinamiento laboral inclusivo para estudiantes.",
   "requestFramePermissions": [
     "microphone"
   ]
